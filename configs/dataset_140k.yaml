@@ -1,0 +1,37 @@
+# Dataset Configuration: 140K Real and Fake Faces
+dataset:
+  name: "140k_real_and_fake_faces"
+  root_dir: "e:/DEEPFAKE/daaset"
+  images_dir: "e:/DEEPFAKE/daaset/real_vs_fake/real-vs-fake"
+  
+  csv_files:
+    train: "e:/DEEPFAKE/daaset/train.csv"
+    valid: "e:/DEEPFAKE/daaset/valid.csv"
+    test: "e:/DEEPFAKE/daaset/test.csv"
+    
+  classes:
+    - name: "fake"
+      label: 0
+    - name: "real"
+      label: 1
+      
+  expected_counts:
+    train:
+      real: 50000
+      fake: 50000
+      total: 100000
+    valid:
+      real: 10000
+      fake: 10000
+      total: 20000
+    test:
+      real: 10000
+      fake: 10000
+      total: 20000
+    total_dataset: 140000
+    
+  image_properties:
+    expected_height: 256
+    expected_width: 256
+    expected_channels: 3
+    format: "JPEG"

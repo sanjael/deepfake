@@ -1,0 +1,41 @@
+# Baseline 2: Frequency Branch (2D-DWT Only)
+experiment:
+  name: "baseline2_frequency_dwt"
+  type: "frequency"
+  description: "Frequency-only deepfake baseline using 2D Discrete Wavelet Decomposition (LL, LH, HL, HH subbands)"
+
+dataset:
+  root_dir: "e:/DEEPFAKE/daaset"
+  images_dir: "e:/DEEPFAKE/daaset/real_vs_fake/real-vs-fake"
+  csv_files:
+    train: "e:/DEEPFAKE/daaset/train.csv"
+    valid: "e:/DEEPFAKE/daaset/valid.csv"
+    test: "e:/DEEPFAKE/daaset/test.csv"
+  img_size: 256
+  max_train_samples: null
+  max_eval_samples: null
+
+model:
+  architecture: "frequency_branch"
+  in_channels: 12
+  feature_dim: 1792
+  dropout_rate: 0.3
+  num_classes: 1
+
+training:
+  batch_size: 32
+  num_workers: 4
+  num_epochs: 15
+  learning_rate: 0.0005
+  weight_decay: 0.00001
+  optimizer: "adamw"
+  scheduler: "cosine"
+  loss: "bce"
+  use_amp: true
+  grad_clip_norm: 1.0
+  early_stopping_patience: 5
+  seed: 42
+
+paths:
+  checkpoints_dir: "results/checkpoints"
+  logs_dir: "results/logs"

@@ -1,0 +1,159 @@
+{
+  "dataset_audit": {
+    "train": {
+      "csv_total_rows": 100000,
+      "csv_files_found_on_disk": 100000,
+      "csv_files_missing": 0,
+      "missing_samples_preview": [],
+      "disk_folder_real_count": 50000,
+      "disk_folder_fake_count": 50000,
+      "disk_folder_total": 100000,
+      "perfect_match": true
+    },
+    "valid": {
+      "csv_total_rows": 20000,
+      "csv_files_found_on_disk": 20000,
+      "csv_files_missing": 0,
+      "missing_samples_preview": [],
+      "disk_folder_real_count": 10000,
+      "disk_folder_fake_count": 10000,
+      "disk_folder_total": 20000,
+      "perfect_match": true
+    },
+    "test": {
+      "csv_total_rows": 20000,
+      "csv_files_found_on_disk": 20000,
+      "csv_files_missing": 0,
+      "missing_samples_preview": [],
+      "disk_folder_real_count": 10000,
+      "disk_folder_fake_count": 10000,
+      "disk_folder_total": 20000,
+      "perfect_match": true
+    }
+  },
+  "split_statistics": {},
+  "imbalance_analysis": {
+    "train": {
+      "total_samples": 100000,
+      "real_count": 50000,
+      "fake_count": 50000,
+      "real_percentage": 50.0,
+      "fake_percentage": 50.0,
+      "imbalance_ratio": 1.0,
+      "is_balanced": true,
+      "status": "Perfect 50:50 Balance"
+    },
+    "valid": {
+      "total_samples": 20000,
+      "real_count": 10000,
+      "fake_count": 10000,
+      "real_percentage": 50.0,
+      "fake_percentage": 50.0,
+      "imbalance_ratio": 1.0,
+      "is_balanced": true,
+      "status": "Perfect 50:50 Balance"
+    },
+    "test": {
+      "total_samples": 20000,
+      "real_count": 10000,
+      "fake_count": 10000,
+      "real_percentage": 50.0,
+      "fake_percentage": 50.0,
+      "imbalance_ratio": 1.0,
+      "is_balanced": true,
+      "status": "Perfect 50:50 Balance"
+    },
+    "overall": {
+      "total_samples": 140000,
+      "total_real": 70000,
+      "total_fake": 70000,
+      "real_percentage": 50.0,
+      "fake_percentage": 50.0,
+      "imbalance_ratio": 1.0,
+      "is_balanced": true,
+      "status": "Perfect 50:50 Balance"
+    }
+  },
+  "leakage_analysis": {
+    "id_overlap": {
+      "train_valid_overlap_count": 0,
+      "train_test_overlap_count": 0,
+      "valid_test_overlap_count": 0,
+      "leakage_in_ids": false
+    },
+    "original_path_overlap": {
+      "train_valid_overlap_count": 0,
+      "train_test_overlap_count": 0,
+      "valid_test_overlap_count": 0,
+      "leakage_in_original_paths": false
+    },
+    "filename_overlap": {},
+    "hash_overlap": {
+      "train_valid_identical_images": 0,
+      "train_test_identical_images": 0,
+      "valid_test_identical_images": 0,
+      "samples_evaluated_per_split": {
+        "train": 100000,
+        "valid": 20000,
+        "test": 20000
+      }
+    },
+    "intra_split_duplicates": {
+      "train": 0,
+      "valid": 0,
+      "test": 0
+    },
+    "leakage_detected": false
+  },
+  "integrity_analysis": {
+    "train": {
+      "checked_count": 100000,
+      "corrupted_count": 0,
+      "corrupted_samples": [],
+      "dimension_distribution": {
+        "(256, 256, 3)": 100000
+      },
+      "color_modes": {
+        "RGB": 100000
+      },
+      "mean_file_size_kb": 28.02,
+      "min_file_size_kb": 13.48,
+      "max_file_size_kb": 51.42,
+      "all_dimensions_valid": true,
+      "is_100_percent_healthy": true
+    },
+    "valid": {
+      "checked_count": 20000,
+      "corrupted_count": 0,
+      "corrupted_samples": [],
+      "dimension_distribution": {
+        "(256, 256, 3)": 20000
+      },
+      "color_modes": {
+        "RGB": 20000
+      },
+      "mean_file_size_kb": 27.97,
+      "min_file_size_kb": 13.59,
+      "max_file_size_kb": 50.47,
+      "all_dimensions_valid": true,
+      "is_100_percent_healthy": true
+    },
+    "test": {
+      "checked_count": 20000,
+      "corrupted_count": 0,
+      "corrupted_samples": [],
+      "dimension_distribution": {
+        "(256, 256, 3)": 20000
+      },
+      "color_modes": {
+        "RGB": 20000
+      },
+      "mean_file_size_kb": 28.01,
+      "min_file_size_kb": 15.38,
+      "max_file_size_kb": 52.27,
+      "all_dimensions_valid": true,
+      "is_100_percent_healthy": true
+    }
+  },
+  "summary": {}
+}

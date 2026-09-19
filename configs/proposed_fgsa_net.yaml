@@ -1,0 +1,41 @@
+# Proposed Model: FGSA-Net (EfficientNet-B4 + DWT Frequency + Attention Fusion)
+experiment:
+  name: "proposed_fgsa_net"
+  type: "fgsa_net"
+  description: "Proposed Frequency-Guided Spatial Attention Network fusing EfficientNet-B4 spatial features with DWT wavelet features via learnable gating"
+
+dataset:
+  root_dir: "e:/DEEPFAKE/daaset"
+  images_dir: "e:/DEEPFAKE/daaset/real_vs_fake/real-vs-fake"
+  csv_files:
+    train: "e:/DEEPFAKE/daaset/train.csv"
+    valid: "e:/DEEPFAKE/daaset/valid.csv"
+    test: "e:/DEEPFAKE/daaset/test.csv"
+  img_size: 256
+  max_train_samples: null
+  max_eval_samples: null
+
+model:
+  architecture: "fgsa_net"
+  feature_dim: 1792
+  pretrained_spatial: true
+  dropout_rate: 0.3
+  num_classes: 1
+
+training:
+  batch_size: 32
+  num_workers: 4
+  num_epochs: 15
+  learning_rate: 0.0003
+  weight_decay: 0.00001
+  optimizer: "adamw"
+  scheduler: "cosine"
+  loss: "bce"
+  use_amp: true
+  grad_clip_norm: 1.0
+  early_stopping_patience: 5
+  seed: 42
+
+paths:
+  checkpoints_dir: "results/checkpoints"
+  logs_dir: "results/logs"

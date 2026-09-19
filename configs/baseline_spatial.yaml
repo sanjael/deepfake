@@ -1,0 +1,42 @@
+# Baseline 1: Spatial Branch (EfficientNet-B4 Only)
+experiment:
+  name: "baseline1_efficientnet_b4_spatial"
+  type: "spatial"
+  description: "Spatial-only deepfake baseline using pretrained EfficientNet-B4 backbone"
+
+dataset:
+  root_dir: "e:/DEEPFAKE/daaset"
+  images_dir: "e:/DEEPFAKE/daaset/real_vs_fake/real-vs-fake"
+  csv_files:
+    train: "e:/DEEPFAKE/daaset/train.csv"
+    valid: "e:/DEEPFAKE/daaset/valid.csv"
+    test: "e:/DEEPFAKE/daaset/test.csv"
+  img_size: 256
+  # Max samples can be set to null for full 140k dataset, or a smaller number for fast initial baseline exploration
+  max_train_samples: null
+  max_eval_samples: null
+
+model:
+  architecture: "efficientnet_b4"
+  pretrained: true
+  dropout_rate: 0.3
+  feature_dim: 1792
+  num_classes: 1
+
+training:
+  batch_size: 32
+  num_workers: 4
+  num_epochs: 15
+  learning_rate: 0.0003
+  weight_decay: 0.00001
+  optimizer: "adamw"
+  scheduler: "cosine"
+  loss: "bce"
+  use_amp: true
+  grad_clip_norm: 1.0
+  early_stopping_patience: 5
+  seed: 42
+
+paths:
+  checkpoints_dir: "results/checkpoints"
+  logs_dir: "results/logs"

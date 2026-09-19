@@ -1,0 +1,116 @@
+# ==============================================================================
+# Git Ignore Configuration for Deepfake Detection Research (M4D-Net)
+# ==============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+*.pyd
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Datasets and raw data (large media & csv files)
+daaset/
+data/
+dataset/
+datasets/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Model weights & Checkpoints (large binary files)
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+*.engine
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.weights
+results/checkpoints/
+checkpoints/
+
+# Experiment logs, predictions & temporary run outputs
+results/logs/
+results/predictions/
+results/evaluation/
+runs/
+wandb/
+tensorboard/
+*.log
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*.tmp
+
+# Environment variables & secrets
+.env
+.env.local
+.env.*.local
